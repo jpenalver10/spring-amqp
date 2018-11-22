@@ -1,0 +1,26 @@
+server:
+    port: 8080
+    servlet:
+        contextPath: /amqp
+        
+spring:
+    rabbitmq:
+        host: localhost
+        port: 5672
+        username: guest
+        password: guest
+        virtual-host: events
+        
+joak:
+    spring:
+        rabbitmq:
+            consumers: 1
+            max-consumers: 8
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+
+#spring.rabbitmq.cache.channel.size
