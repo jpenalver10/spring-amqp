@@ -11,6 +11,7 @@ buildscript {
 }
 
 apply plugin: 'java'
+apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
@@ -50,6 +51,10 @@ dependencyManagement {
 bootRun {
 
 	main = 'com.joak.spring.amqp.Application'
+	
+	//systemProperty 'spring.profiles.active', 'sprint'
+	//systemProperty 'spring.config.location', 'classpath:/, file:./configuration/' 
+	//systemProperty 'spring.config.location', 'classpath:/, file:./configuration/application-sprint.yaml' 
 	
 	jvmArgs=["-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005"]
 }
