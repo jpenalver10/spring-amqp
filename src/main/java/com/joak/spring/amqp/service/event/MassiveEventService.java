@@ -20,8 +20,8 @@ public class MassiveEventService {
 
 	public void start() throws InterruptedException {
 		this.running = true;
-		massiveLaunch();
-		//send();
+        // massiveLaunch();
+        send();
 	}
 
 	public void stop() {
